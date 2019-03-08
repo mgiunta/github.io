@@ -1,0 +1,1745 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>Blueshift Data Analytics</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Blueshift Data Analytics Atom Feed" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Blueshift Data Analytics </a></h1>
+                <nav><ul>
+                    <li><a href="/category/posts.html">posts</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+
+            <aside id="featured" class="body">
+                <article>
+                    <h1 class="entry-title"><a href="/first-post.html">First Post</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2019-03-08T12:00:00-05:00">
+                Published: Fri 08 March 2019
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/matthew-giunta.html">Matthew Giunta</a>
+        </address>
+<p>In <a href="/category/posts.html">posts</a>.</p>
+<p>tags: <a href="/tag/python-firsts.html">python firsts</a> </p>
+</footer><!-- /.post-info --><style type="text/css">/*!
+*
+* IPython notebook
+*
+*/
+/* CSS font colors for translated ANSI escape sequences */
+/* The color values are a mix of
+   http://www.xcolors.net/dl/baskerville-ivorylight and
+   http://www.xcolors.net/dl/euphrasia */
+.ansi-black-fg {
+  color: #3E424D;
+}
+.ansi-black-bg {
+  background-color: #3E424D;
+}
+.ansi-black-intense-fg {
+  color: #282C36;
+}
+.ansi-black-intense-bg {
+  background-color: #282C36;
+}
+.ansi-red-fg {
+  color: #E75C58;
+}
+.ansi-red-bg {
+  background-color: #E75C58;
+}
+.ansi-red-intense-fg {
+  color: #B22B31;
+}
+.ansi-red-intense-bg {
+  background-color: #B22B31;
+}
+.ansi-green-fg {
+  color: #00A250;
+}
+.ansi-green-bg {
+  background-color: #00A250;
+}
+.ansi-green-intense-fg {
+  color: #007427;
+}
+.ansi-green-intense-bg {
+  background-color: #007427;
+}
+.ansi-yellow-fg {
+  color: #DDB62B;
+}
+.ansi-yellow-bg {
+  background-color: #DDB62B;
+}
+.ansi-yellow-intense-fg {
+  color: #B27D12;
+}
+.ansi-yellow-intense-bg {
+  background-color: #B27D12;
+}
+.ansi-blue-fg {
+  color: #208FFB;
+}
+.ansi-blue-bg {
+  background-color: #208FFB;
+}
+.ansi-blue-intense-fg {
+  color: #0065CA;
+}
+.ansi-blue-intense-bg {
+  background-color: #0065CA;
+}
+.ansi-magenta-fg {
+  color: #D160C4;
+}
+.ansi-magenta-bg {
+  background-color: #D160C4;
+}
+.ansi-magenta-intense-fg {
+  color: #A03196;
+}
+.ansi-magenta-intense-bg {
+  background-color: #A03196;
+}
+.ansi-cyan-fg {
+  color: #60C6C8;
+}
+.ansi-cyan-bg {
+  background-color: #60C6C8;
+}
+.ansi-cyan-intense-fg {
+  color: #258F8F;
+}
+.ansi-cyan-intense-bg {
+  background-color: #258F8F;
+}
+.ansi-white-fg {
+  color: #C5C1B4;
+}
+.ansi-white-bg {
+  background-color: #C5C1B4;
+}
+.ansi-white-intense-fg {
+  color: #A1A6B2;
+}
+.ansi-white-intense-bg {
+  background-color: #A1A6B2;
+}
+.ansi-default-inverse-fg {
+  color: #FFFFFF;
+}
+.ansi-default-inverse-bg {
+  background-color: #000000;
+}
+.ansi-bold {
+  font-weight: bold;
+}
+.ansi-underline {
+  text-decoration: underline;
+}
+/* The following styles are deprecated an will be removed in a future version */
+.ansibold {
+  font-weight: bold;
+}
+.ansi-inverse {
+  outline: 0.5px dotted;
+}
+/* use dark versions for foreground, to improve visibility */
+.ansiblack {
+  color: black;
+}
+.ansired {
+  color: darkred;
+}
+.ansigreen {
+  color: darkgreen;
+}
+.ansiyellow {
+  color: #c4a000;
+}
+.ansiblue {
+  color: darkblue;
+}
+.ansipurple {
+  color: darkviolet;
+}
+.ansicyan {
+  color: steelblue;
+}
+.ansigray {
+  color: gray;
+}
+/* and light for background, for the same reason */
+.ansibgblack {
+  background-color: black;
+}
+.ansibgred {
+  background-color: red;
+}
+.ansibggreen {
+  background-color: green;
+}
+.ansibgyellow {
+  background-color: yellow;
+}
+.ansibgblue {
+  background-color: blue;
+}
+.ansibgpurple {
+  background-color: magenta;
+}
+.ansibgcyan {
+  background-color: cyan;
+}
+.ansibggray {
+  background-color: gray;
+}
+div.cell {
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  border-radius: 2px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+  width: 100%;
+  padding: 5px;
+  /* This acts as a spacer between cells, that is outside the border */
+  margin: 0px;
+  outline: none;
+  position: relative;
+  overflow: visible;
+}
+div.cell:before {
+  position: absolute;
+  display: block;
+  top: -1px;
+  left: -1px;
+  width: 5px;
+  height: calc(100% +  2px);
+  content: '';
+  background: transparent;
+}
+div.cell.jupyter-soft-selected {
+  border-left-color: #E3F2FD;
+  border-left-width: 1px;
+  padding-left: 5px;
+  border-right-color: #E3F2FD;
+  border-right-width: 1px;
+  background: #E3F2FD;
+}
+@media print {
+  div.cell.jupyter-soft-selected {
+    border-color: transparent;
+  }
+}
+div.cell.selected,
+div.cell.selected.jupyter-soft-selected {
+  border-color: #ababab;
+}
+div.cell.selected:before,
+div.cell.selected.jupyter-soft-selected:before {
+  position: absolute;
+  display: block;
+  top: -1px;
+  left: -1px;
+  width: 5px;
+  height: calc(100% +  2px);
+  content: '';
+  background: #42A5F5;
+}
+@media print {
+  div.cell.selected,
+  div.cell.selected.jupyter-soft-selected {
+    border-color: transparent;
+  }
+}
+.edit_mode div.cell.selected {
+  border-color: #66BB6A;
+}
+.edit_mode div.cell.selected:before {
+  position: absolute;
+  display: block;
+  top: -1px;
+  left: -1px;
+  width: 5px;
+  height: calc(100% +  2px);
+  content: '';
+  background: #66BB6A;
+}
+@media print {
+  .edit_mode div.cell.selected {
+    border-color: transparent;
+  }
+}
+.prompt {
+  /* This needs to be wide enough for 3 digit prompt numbers: In[100]: */
+  min-width: 14ex;
+  /* This padding is tuned to match the padding on the CodeMirror editor. */
+  padding: 0.4em;
+  margin: 0px;
+  font-family: monospace;
+  text-align: right;
+  /* This has to match that of the the CodeMirror class line-height below */
+  line-height: 1.21429em;
+  /* Don't highlight prompt number selection */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  /* Use default cursor */
+  cursor: default;
+}
+@media (max-width: 540px) {
+  .prompt {
+    text-align: left;
+  }
+}
+div.inner_cell {
+  min-width: 0;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  /* Old browsers */
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  /* Modern browsers */
+  flex: 1;
+}
+/* input_area and input_prompt must match in top border and margin for alignment */
+div.input_area {
+  border: 1px solid #cfcfcf;
+  border-radius: 2px;
+  background: #f7f7f7;
+  line-height: 1.21429em;
+}
+/* This is needed so that empty prompt areas can collapse to zero height when there
+   is no content in the output_subarea and the prompt. The main purpose of this is
+   to make sure that empty JavaScript output_subareas have no height. */
+div.prompt:empty {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+div.unrecognized_cell {
+  padding: 5px 5px 5px 0px;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: horizontal;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+div.unrecognized_cell .inner_cell {
+  border-radius: 2px;
+  padding: 5px;
+  font-weight: bold;
+  color: red;
+  border: 1px solid #cfcfcf;
+  background: #eaeaea;
+}
+div.unrecognized_cell .inner_cell a {
+  color: inherit;
+  text-decoration: none;
+}
+div.unrecognized_cell .inner_cell a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+@media (max-width: 540px) {
+  div.unrecognized_cell > div.prompt {
+    display: none;
+  }
+}
+div.code_cell {
+  /* avoid page breaking on code cells when printing */
+}
+@media print {
+  div.code_cell {
+    page-break-inside: avoid;
+  }
+}
+/* any special styling for code cells that are currently running goes here */
+div.input {
+  page-break-inside: avoid;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: horizontal;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+@media (max-width: 540px) {
+  div.input {
+    /* Old browsers */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-align: stretch;
+    display: -moz-box;
+    -moz-box-orient: vertical;
+    -moz-box-align: stretch;
+    display: box;
+    box-orient: vertical;
+    box-align: stretch;
+    /* Modern browsers */
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+/* input_area and input_prompt must match in top border and margin for alignment */
+div.input_prompt {
+  color: #303F9F;
+  border-top: 1px solid transparent;
+}
+div.input_area > div.highlight {
+  margin: 0.4em;
+  border: none;
+  padding: 0px;
+  background-color: transparent;
+}
+div.input_area > div.highlight > pre {
+  margin: 0px;
+  border: none;
+  padding: 0px;
+  background-color: transparent;
+}
+/* The following gets added to the <head> if it is detected that the user has a
+ * monospace font with inconsistent normal/bold/italic height.  See
+ * notebookmain.js.  Such fonts will have keywords vertically offset with
+ * respect to the rest of the text.  The user should select a better font.
+ * See: https://github.com/ipython/ipython/issues/1503
+ *
+ * .CodeMirror span {
+ *      vertical-align: bottom;
+ * }
+ */
+.CodeMirror {
+  line-height: 1.21429em;
+  /* Changed from 1em to our global default */
+  font-size: 14px;
+  height: auto;
+  /* Changed to auto to autogrow */
+  background: none;
+  /* Changed from white to allow our bg to show through */
+}
+.CodeMirror-scroll {
+  /*  The CodeMirror docs are a bit fuzzy on if overflow-y should be hidden or visible.*/
+  /*  We have found that if it is visible, vertical scrollbars appear with font size changes.*/
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+.CodeMirror-lines {
+  /* In CM2, this used to be 0.4em, but in CM3 it went to 4px. We need the em value because */
+  /* we have set a different line-height and want this to scale with that. */
+  /* Note that this should set vertical padding only, since CodeMirror assumes
+       that horizontal padding will be set on CodeMirror pre */
+  padding: 0.4em 0;
+}
+.CodeMirror-linenumber {
+  padding: 0 8px 0 4px;
+}
+.CodeMirror-gutters {
+  border-bottom-left-radius: 2px;
+  border-top-left-radius: 2px;
+}
+.CodeMirror pre {
+  /* In CM3 this went to 4px from 0 in CM2. This sets horizontal padding only,
+    use .CodeMirror-lines for vertical */
+  padding: 0 0.4em;
+  border: 0;
+  border-radius: 0;
+}
+.CodeMirror-cursor {
+  border-left: 1.4px solid black;
+}
+@media screen and (min-width: 2138px) and (max-width: 4319px) {
+  .CodeMirror-cursor {
+    border-left: 2px solid black;
+  }
+}
+@media screen and (min-width: 4320px) {
+  .CodeMirror-cursor {
+    border-left: 4px solid black;
+  }
+}
+/*
+
+Original style from softwaremaniacs.org (c) Ivan Sagalaev <Maniac@SoftwareManiacs.Org>
+Adapted from GitHub theme
+
+*/
+.highlight-base {
+  color: #000;
+}
+.highlight-variable {
+  color: #000;
+}
+.highlight-variable-2 {
+  color: #1a1a1a;
+}
+.highlight-variable-3 {
+  color: #333333;
+}
+.highlight-string {
+  color: #BA2121;
+}
+.highlight-comment {
+  color: #408080;
+  font-style: italic;
+}
+.highlight-number {
+  color: #080;
+}
+.highlight-atom {
+  color: #88F;
+}
+.highlight-keyword {
+  color: #008000;
+  font-weight: bold;
+}
+.highlight-builtin {
+  color: #008000;
+}
+.highlight-error {
+  color: #f00;
+}
+.highlight-operator {
+  color: #AA22FF;
+  font-weight: bold;
+}
+.highlight-meta {
+  color: #AA22FF;
+}
+/* previously not defined, copying from default codemirror */
+.highlight-def {
+  color: #00f;
+}
+.highlight-string-2 {
+  color: #f50;
+}
+.highlight-qualifier {
+  color: #555;
+}
+.highlight-bracket {
+  color: #997;
+}
+.highlight-tag {
+  color: #170;
+}
+.highlight-attribute {
+  color: #00c;
+}
+.highlight-header {
+  color: blue;
+}
+.highlight-quote {
+  color: #090;
+}
+.highlight-link {
+  color: #00c;
+}
+/* apply the same style to codemirror */
+.cm-s-ipython span.cm-keyword {
+  color: #008000;
+  font-weight: bold;
+}
+.cm-s-ipython span.cm-atom {
+  color: #88F;
+}
+.cm-s-ipython span.cm-number {
+  color: #080;
+}
+.cm-s-ipython span.cm-def {
+  color: #00f;
+}
+.cm-s-ipython span.cm-variable {
+  color: #000;
+}
+.cm-s-ipython span.cm-operator {
+  color: #AA22FF;
+  font-weight: bold;
+}
+.cm-s-ipython span.cm-variable-2 {
+  color: #1a1a1a;
+}
+.cm-s-ipython span.cm-variable-3 {
+  color: #333333;
+}
+.cm-s-ipython span.cm-comment {
+  color: #408080;
+  font-style: italic;
+}
+.cm-s-ipython span.cm-string {
+  color: #BA2121;
+}
+.cm-s-ipython span.cm-string-2 {
+  color: #f50;
+}
+.cm-s-ipython span.cm-meta {
+  color: #AA22FF;
+}
+.cm-s-ipython span.cm-qualifier {
+  color: #555;
+}
+.cm-s-ipython span.cm-builtin {
+  color: #008000;
+}
+.cm-s-ipython span.cm-bracket {
+  color: #997;
+}
+.cm-s-ipython span.cm-tag {
+  color: #170;
+}
+.cm-s-ipython span.cm-attribute {
+  color: #00c;
+}
+.cm-s-ipython span.cm-header {
+  color: blue;
+}
+.cm-s-ipython span.cm-quote {
+  color: #090;
+}
+.cm-s-ipython span.cm-link {
+  color: #00c;
+}
+.cm-s-ipython span.cm-error {
+  color: #f00;
+}
+.cm-s-ipython span.cm-tab {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAMCAYAAAAkuj5RAAAAAXNSR0IArs4c6QAAAGFJREFUSMft1LsRQFAQheHPowAKoACx3IgEKtaEHujDjORSgWTH/ZOdnZOcM/sgk/kFFWY0qV8foQwS4MKBCS3qR6ixBJvElOobYAtivseIE120FaowJPN75GMu8j/LfMwNjh4HUpwg4LUAAAAASUVORK5CYII=);
+  background-position: right;
+  background-repeat: no-repeat;
+}
+div.output_wrapper {
+  /* this position must be relative to enable descendents to be absolute within it */
+  position: relative;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  z-index: 1;
+}
+/* class for the output area when it should be height-limited */
+div.output_scroll {
+  /* ideally, this would be max-height, but FF barfs all over that */
+  height: 24em;
+  /* FF needs this *and the wrapper* to specify full width, or it will shrinkwrap */
+  width: 100%;
+  overflow: auto;
+  border-radius: 2px;
+  -webkit-box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.8);
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.8);
+  display: block;
+}
+/* output div while it is collapsed */
+div.output_collapsed {
+  margin: 0px;
+  padding: 0px;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+div.out_prompt_overlay {
+  height: 100%;
+  padding: 0px 0.4em;
+  position: absolute;
+  border-radius: 2px;
+}
+div.out_prompt_overlay:hover {
+  /* use inner shadow to get border that is computed the same on WebKit/FF */
+  -webkit-box-shadow: inset 0 0 1px #000;
+  box-shadow: inset 0 0 1px #000;
+  background: rgba(240, 240, 240, 0.5);
+}
+div.output_prompt {
+  color: #D84315;
+}
+/* This class is the outer container of all output sections. */
+div.output_area {
+  padding: 0px;
+  page-break-inside: avoid;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: horizontal;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+div.output_area .MathJax_Display {
+  text-align: left !important;
+}
+div.output_area 
+div.output_area 
+div.output_area img,
+div.output_area svg {
+  max-width: 100%;
+  height: auto;
+}
+div.output_area img.unconfined,
+div.output_area svg.unconfined {
+  max-width: none;
+}
+div.output_area .mglyph > img {
+  max-width: none;
+}
+/* This is needed to protect the pre formating from global settings such
+   as that of bootstrap */
+.output {
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+@media (max-width: 540px) {
+  div.output_area {
+    /* Old browsers */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-align: stretch;
+    display: -moz-box;
+    -moz-box-orient: vertical;
+    -moz-box-align: stretch;
+    display: box;
+    box-orient: vertical;
+    box-align: stretch;
+    /* Modern browsers */
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+div.output_area pre {
+  margin: 0;
+  padding: 1px 0 1px 0;
+  border: 0;
+  vertical-align: baseline;
+  color: black;
+  background-color: transparent;
+  border-radius: 0;
+}
+/* This class is for the output subarea inside the output_area and after
+   the prompt div. */
+div.output_subarea {
+  overflow-x: auto;
+  padding: 0.4em;
+  /* Old browsers */
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  /* Modern browsers */
+  flex: 1;
+  max-width: calc(100% - 14ex);
+}
+div.output_scroll div.output_subarea {
+  overflow-x: visible;
+}
+/* The rest of the output_* classes are for special styling of the different
+   output types */
+/* all text output has this class: */
+div.output_text {
+  text-align: left;
+  color: #000;
+  /* This has to match that of the the CodeMirror class line-height below */
+  line-height: 1.21429em;
+}
+/* stdout/stderr are 'text' as well as 'stream', but execute_result/error are *not* streams */
+div.output_stderr {
+  background: #fdd;
+  /* very light red background for stderr */
+}
+div.output_latex {
+  text-align: left;
+}
+/* Empty output_javascript divs should have no height */
+div.output_javascript:empty {
+  padding: 0;
+}
+.js-error {
+  color: darkred;
+}
+/* raw_input styles */
+div.raw_input_container {
+  line-height: 1.21429em;
+  padding-top: 5px;
+}
+pre.raw_input_prompt {
+  /* nothing needed here. */
+}
+input.raw_input {
+  font-family: monospace;
+  font-size: inherit;
+  color: inherit;
+  width: auto;
+  /* make sure input baseline aligns with prompt */
+  vertical-align: baseline;
+  /* padding + margin = 0.5em between prompt and cursor */
+  padding: 0em 0.25em;
+  margin: 0em 0.25em;
+}
+input.raw_input:focus {
+  box-shadow: none;
+}
+p.p-space {
+  margin-bottom: 10px;
+}
+div.output_unrecognized {
+  padding: 5px;
+  font-weight: bold;
+  color: red;
+}
+div.output_unrecognized a {
+  color: inherit;
+  text-decoration: none;
+}
+div.output_unrecognized a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+.rendered_html {
+  color: #000;
+  /* any extras will just be numbers: */
+}
+
+
+
+.rendered_html :link {
+  text-decoration: underline;
+}
+.rendered_html :visited {
+  text-decoration: underline;
+}
+
+
+
+
+
+
+.rendered_html h1:first-child {
+  margin-top: 0.538em;
+}
+.rendered_html h2:first-child {
+  margin-top: 0.636em;
+}
+.rendered_html h3:first-child {
+  margin-top: 0.777em;
+}
+.rendered_html h4:first-child {
+  margin-top: 1em;
+}
+.rendered_html h5:first-child {
+  margin-top: 1em;
+}
+.rendered_html h6:first-child {
+  margin-top: 1em;
+}
+.rendered_html ul:not(.list-inline),
+.rendered_html ol:not(.list-inline) {
+  padding-left: 2em;
+}
+
+
+
+
+
+
+
+
+.rendered_html * + ul {
+  margin-top: 1em;
+}
+.rendered_html * + ol {
+  margin-top: 1em;
+}
+
+
+
+
+
+.rendered_html pre,
+
+
+
+
+.rendered_html tr,
+.rendered_html th,
+
+
+.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
+.rendered_html * + table {
+  margin-top: 1em;
+}
+
+.rendered_html * + p {
+  margin-top: 1em;
+}
+
+.rendered_html * + img {
+  margin-top: 1em;
+}
+.rendered_html img,
+
+.rendered_html img.unconfined,
+
+
+.rendered_html * + .alert {
+  margin-top: 1em;
+}
+[dir="rtl"] 
+div.text_cell {
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: horizontal;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+@media (max-width: 540px) {
+  div.text_cell > div.prompt {
+    display: none;
+  }
+}
+div.text_cell_render {
+  /*font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;*/
+  outline: none;
+  resize: none;
+  width: inherit;
+  border-style: none;
+  padding: 0.5em 0.5em 0.5em 0.4em;
+  color: #000;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+a.anchor-link:link {
+  text-decoration: none;
+  padding: 0px 20px;
+  visibility: hidden;
+}
+h1:hover .anchor-link,
+h2:hover .anchor-link,
+h3:hover .anchor-link,
+h4:hover .anchor-link,
+h5:hover .anchor-link,
+h6:hover .anchor-link {
+  visibility: visible;
+}
+.text_cell.rendered .input_area {
+  display: none;
+}
+.text_cell.rendered 
+.text_cell.rendered .rendered_html tr,
+.text_cell.rendered .rendered_html th,
+.text_cell.rendered 
+.text_cell.unrendered .text_cell_render {
+  display: none;
+}
+.text_cell .dropzone .input_area {
+  border: 2px dashed #bababa;
+  margin: -1px;
+}
+.cm-header-1,
+.cm-header-2,
+.cm-header-3,
+.cm-header-4,
+.cm-header-5,
+.cm-header-6 {
+  font-weight: bold;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.cm-header-1 {
+  font-size: 185.7%;
+}
+.cm-header-2 {
+  font-size: 157.1%;
+}
+.cm-header-3 {
+  font-size: 128.6%;
+}
+.cm-header-4 {
+  font-size: 110%;
+}
+.cm-header-5 {
+  font-size: 100%;
+  font-style: italic;
+}
+.cm-header-6 {
+  font-size: 100%;
+  font-style: italic;
+}
+</style>
+<style type="text/css">.highlight .hll { background-color: #ffffcc }
+.highlight  { background: #f8f8f8; }
+.highlight .c { color: #408080; font-style: italic } /* Comment */
+.highlight .err { border: 1px solid #FF0000 } /* Error */
+.highlight .k { color: #008000; font-weight: bold } /* Keyword */
+.highlight .o { color: #666666 } /* Operator */
+.highlight .ch { color: #408080; font-style: italic } /* Comment.Hashbang */
+.highlight .cm { color: #408080; font-style: italic } /* Comment.Multiline */
+.highlight .cp { color: #BC7A00 } /* Comment.Preproc */
+.highlight .cpf { color: #408080; font-style: italic } /* Comment.PreprocFile */
+.highlight .c1 { color: #408080; font-style: italic } /* Comment.Single */
+.highlight .cs { color: #408080; font-style: italic } /* Comment.Special */
+.highlight .gd { color: #A00000 } /* Generic.Deleted */
+.highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .gr { color: #FF0000 } /* Generic.Error */
+.highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.highlight .gi { color: #00A000 } /* Generic.Inserted */
+.highlight .go { color: #888888 } /* Generic.Output */
+.highlight .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+.highlight .gs { font-weight: bold } /* Generic.Strong */
+.highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.highlight .gt { color: #0044DD } /* Generic.Traceback */
+.highlight .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+.highlight .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+.highlight .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+.highlight .kp { color: #008000 } /* Keyword.Pseudo */
+.highlight .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+.highlight .kt { color: #B00040 } /* Keyword.Type */
+.highlight .m { color: #666666 } /* Literal.Number */
+.highlight .s { color: #BA2121 } /* Literal.String */
+.highlight .na { color: #7D9029 } /* Name.Attribute */
+.highlight .nb { color: #008000 } /* Name.Builtin */
+.highlight .nc { color: #0000FF; font-weight: bold } /* Name.Class */
+.highlight .no { color: #880000 } /* Name.Constant */
+.highlight .nd { color: #AA22FF } /* Name.Decorator */
+.highlight .ni { color: #999999; font-weight: bold } /* Name.Entity */
+.highlight .ne { color: #D2413A; font-weight: bold } /* Name.Exception */
+.highlight .nf { color: #0000FF } /* Name.Function */
+.highlight .nl { color: #A0A000 } /* Name.Label */
+.highlight .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+.highlight .nt { color: #008000; font-weight: bold } /* Name.Tag */
+.highlight .nv { color: #19177C } /* Name.Variable */
+.highlight .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+.highlight .w { color: #bbbbbb } /* Text.Whitespace */
+.highlight .mb { color: #666666 } /* Literal.Number.Bin */
+.highlight .mf { color: #666666 } /* Literal.Number.Float */
+.highlight .mh { color: #666666 } /* Literal.Number.Hex */
+.highlight .mi { color: #666666 } /* Literal.Number.Integer */
+.highlight .mo { color: #666666 } /* Literal.Number.Oct */
+.highlight .sa { color: #BA2121 } /* Literal.String.Affix */
+.highlight .sb { color: #BA2121 } /* Literal.String.Backtick */
+.highlight .sc { color: #BA2121 } /* Literal.String.Char */
+.highlight .dl { color: #BA2121 } /* Literal.String.Delimiter */
+.highlight .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+.highlight .s2 { color: #BA2121 } /* Literal.String.Double */
+.highlight .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
+.highlight .sh { color: #BA2121 } /* Literal.String.Heredoc */
+.highlight .si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
+.highlight .sx { color: #008000 } /* Literal.String.Other */
+.highlight .sr { color: #BB6688 } /* Literal.String.Regex */
+.highlight .s1 { color: #BA2121 } /* Literal.String.Single */
+.highlight .ss { color: #19177C } /* Literal.String.Symbol */
+.highlight .bp { color: #008000 } /* Name.Builtin.Pseudo */
+.highlight .fm { color: #0000FF } /* Name.Function.Magic */
+.highlight .vc { color: #19177C } /* Name.Variable.Class */
+.highlight .vg { color: #19177C } /* Name.Variable.Global */
+.highlight .vi { color: #19177C } /* Name.Variable.Instance */
+.highlight .vm { color: #19177C } /* Name.Variable.Magic */
+.highlight .il { color: #666666 } /* Literal.Number.Integer.Long */</style>
+<style type="text/css">
+/* Temporary definitions which will become obsolete with Notebook release 5.0 */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-bold { font-weight: bold; }
+</style>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Analysis-of-BeerAdvocate-Review-Data">Analysis of BeerAdvocate Review Data<a class="anchor-link" href="#Analysis-of-BeerAdvocate-Review-Data">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Description:
+"This dataset consists of beer reviews from Beeradvocate. The data span a period of more than 10 years, including all ~1.5 million reviews up to November 2011. Each review includes ratings in terms of five "aspects": appearance, aroma, palate, taste, and overall impression. Reviews include product and user information, followed by each of these five ratings, and a plaintext review. We also have reviews from ratebeer."</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Some questions of interest:</p>
+
+<pre><code>1.  Which brewery produces the strongest beers by ABV%?  
+2.  If you had to pick 3 beers to recommend using only this data set, which would you pick?
+3.  Which factors (e.g. aroma, taste, appearance, palate) are most important in determining the overall quality of a beer?
+4.  If I typically enjoy a beer due to its aroma and appearance; which beer style should I try?</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;beer_reviews.csv&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Exploratory-data-analysis-&amp;-clean-up">Exploratory data analysis &amp; clean up<a class="anchor-link" href="#Exploratory-data-analysis-&amp;-clean-up">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>(1586614, 13)
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">())</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 1586614 entries, 0 to 1586613
+Data columns (total 13 columns):
+brewery_id            1586614 non-null int64
+brewery_name          1586599 non-null object
+review_time           1586614 non-null int64
+review_overall        1586614 non-null float64
+review_aroma          1586614 non-null float64
+review_appearance     1586614 non-null float64
+review_profilename    1586266 non-null object
+beer_style            1586614 non-null object
+review_palate         1586614 non-null float64
+review_taste          1586614 non-null float64
+beer_name             1586614 non-null object
+beer_abv              1518829 non-null float64
+beer_beerid           1586614 non-null int64
+dtypes: float64(6), int64(3), object(4)
+memory usage: 157.4+ MB
+None
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Drop rows that have one or more missing column values (approx 4% of data gets dropped)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+
+<span class="c1"># Drop all rows that are duplicates (none)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Convert brewery_id, brewery_name and beer_style into categorical values</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;brewery_name2&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;brewery_name&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;category&#39;</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;beer_style2&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;beer_style&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;category&#39;</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;brewery_id2&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;brewery_id&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;category&#39;</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;beer_name2&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;beer_name&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;category&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Determine # of unique brewery_name2, beer_name2, beer_style2, beer_name2</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Unique Brewery names: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;brewery_name2&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">()))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Unique Brewery IDs: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;brewery_id2&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">()))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Unique Beer names: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;beer_name2&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">()))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Unique Beer styles: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;beer_style2&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">()))</span>
+
+<span class="c1">#Conclusion: A single brewery can have more than one brewery ID</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Unique Brewery names: 5155
+Unique Brewery IDs: 5230
+Unique Beer names: 44075
+Unique Beer styles: 104
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Remove review outliers by checking that all values in score columns fall within the BeerAdvocate 1-5 rating scale.</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">df</span><span class="p">[(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;review_overall&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;review_overall&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">)]</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">df</span><span class="p">[(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;review_aroma&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;review_aroma&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">)]</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">df</span><span class="p">[(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;review_appearance&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;review_appearance&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">)]</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">df</span><span class="p">[(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;review_palate&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;review_palate&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">)]</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">df</span><span class="p">[(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;review_taste&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;review_taste&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">)]</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">cols</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;review_aroma&#39;</span><span class="p">,</span><span class="s1">&#39;review_appearance&#39;</span><span class="p">,</span><span class="s1">&#39;review_palate&#39;</span><span class="p">,</span><span class="s1">&#39;review_taste&#39;</span><span class="p">,</span><span class="s1">&#39;review_overall&#39;</span><span class="p">]</span>
+<span class="n">df</span><span class="p">[</span><span class="n">cols</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;box&#39;</span> <span class="p">,</span> <span class="n">subplots</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">16</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Q1.-Which-brewery-produces-the-strongest-beers-by-ABV%?">Q1. Which brewery produces the strongest beers by ABV%?<a class="anchor-link" href="#Q1.-Which-brewery-produces-the-strongest-beers-by-ABV%?">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Determine mean ABV% for each brewery, then retrieve brewery with maximum value</span>
+
+<span class="n">df_abv</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;brewery_name2&#39;</span><span class="p">])[[</span><span class="s1">&#39;beer_abv&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">df_abv</span><span class="o">.</span><span class="n">reindex</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;brewery_name2&#39;</span><span class="p">,</span> <span class="s1">&#39;beer_abv&#39;</span><span class="p">])</span>
+<span class="n">df_abv2</span> <span class="o">=</span> <span class="n">df_abv</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;beer_abv&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;A1: The brewery with the strongest beers by AVG ABV</span><span class="si">% i</span><span class="s1">s: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">df_abv2</span><span class="p">[</span><span class="s1">&#39;brewery_name2&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span> <span class="o">+</span> <span class="s1">&#39; at &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">df_abv2</span><span class="p">[</span><span class="s1">&#39;beer_abv&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span> <span class="o">+</span> <span class="s1">&#39; %.&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>A1: The brewery with the strongest beers by AVG ABV% is: Schorschbräu at 19.228823529411763 %.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Q2.-If-you-had-to-pick-3-beers-to-recommend-using-only-this-data-set,-which-would-you-pick?">Q2. If you had to pick 3 beers to recommend using only this data set, which would you pick?<a class="anchor-link" href="#Q2.-If-you-had-to-pick-3-beers-to-recommend-using-only-this-data-set,-which-would-you-pick?">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#My recommendations are based on the product of popularity (normalized total number of reviews) and overall ratings.</span>
+<span class="c1">#   Essentially, this is a crowd-source solution with the rationale that it&#39;s more difficult to uphold a high rating as the</span>
+<span class="c1">#   number of reviews increases (or as time goes on).  The problem here is that smaller breweries making excellent beers</span>
+<span class="c1">#   but with weaker popularity/distribution get penalized.  However, popularity is a function of consumer demand, which is</span>
+<span class="c1">#   driven in part by quality and taste.</span>
+
+<span class="c1">#Q2.1 Which beers are most popular based on total number of reviews?</span>
+<span class="n">df_pop_beers</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;brewery_name2&#39;</span><span class="p">,</span><span class="s1">&#39;beer_name2&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">size</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;review_count&#39;</span><span class="p">)</span>
+<span class="n">df_pop_beers</span> <span class="o">=</span> <span class="n">df_pop_beers</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;review_count&#39;</span><span class="p">],</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+
+<span class="c1">#Q2.2 Which beers have the highest average overall review ratings?</span>
+<span class="n">df_best_beers</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;beer_name2&#39;</span><span class="p">])[[</span><span class="s1">&#39;review_overall&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">df_best_beers</span><span class="o">.</span><span class="n">reindex</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;review_overall&#39;</span><span class="p">])</span>
+<span class="n">df_best_beers</span> <span class="o">=</span> <span class="n">df_best_beers</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;review_overall&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+
+<span class="c1">#Merge popular beers with best reviewed beers</span>
+<span class="n">df2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">df_pop_beers</span><span class="p">,</span> <span class="n">df_best_beers</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;beer_name2&#39;</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;inner&#39;</span><span class="p">)</span>
+
+<span class="c1">#Normalize the review count column, get </span>
+<span class="n">df2</span><span class="p">[</span><span class="s1">&#39;normalized_review_count&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">df2</span><span class="p">[</span><span class="s1">&#39;review_count&#39;</span><span class="p">]</span><span class="o">-</span><span class="n">df2</span><span class="p">[</span><span class="s1">&#39;review_count&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">())</span><span class="o">/</span><span class="p">(</span><span class="n">df2</span><span class="p">[</span><span class="s1">&#39;review_count&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span><span class="o">-</span><span class="n">df2</span><span class="p">[</span><span class="s1">&#39;review_count&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">())</span>
+<span class="n">df2</span><span class="p">[</span><span class="s1">&#39;popular_review_score&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df2</span><span class="p">[</span><span class="s1">&#39;normalized_review_count&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="n">df2</span><span class="p">[</span><span class="s1">&#39;review_overall&#39;</span><span class="p">]</span>
+<span class="n">df2</span> <span class="o">=</span> <span class="n">df2</span><span class="o">.</span><span class="n">sort_values</span><span class="p">([</span><span class="s1">&#39;popular_review_score&#39;</span><span class="p">],</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;My #1 recommended beer is: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">df2</span><span class="o">.</span><span class="n">beer_name2</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">+</span> <span class="s1">&#39; by: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">df_pop_beers</span><span class="o">.</span><span class="n">brewery_name2</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;My #2 recommended beer is: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">df2</span><span class="o">.</span><span class="n">beer_name2</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">+</span> <span class="s1">&#39; by: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">df_pop_beers</span><span class="o">.</span><span class="n">brewery_name2</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;My #3 recommended beer is: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">df2</span><span class="o">.</span><span class="n">beer_name2</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span> <span class="o">+</span> <span class="s1">&#39; by: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">df_pop_beers</span><span class="o">.</span><span class="n">brewery_name2</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span> <span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>My #1 recommended beer is: 90 Minute IPA by: Dogfish Head Brewery
+My #2 recommended beer is: Old Rasputin Russian Imperial Stout by: North Coast Brewing Co.
+My #3 recommended beer is: Sierra Nevada Celebration Ale by: Sierra Nevada Brewing Co.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Q3.--Which-factors-(e.g.-aroma,-taste,-appearance,-palate)-are-most-important-in-determining-the-overall-quality-of-a-beer?">Q3.  Which factors (e.g. aroma, taste, appearance, palate) are most important in determining the overall quality of a beer?<a class="anchor-link" href="#Q3.--Which-factors-(e.g.-aroma,-taste,-appearance,-palate)-are-most-important-in-determining-the-overall-quality-of-a-beer?">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Examine the Pearson correlation matrix to determine the relative strength of each review feature.</span>
+<span class="kn">from</span> <span class="nn">scipy.stats.stats</span> <span class="k">import</span> <span class="n">pearsonr</span>
+
+<span class="n">df3</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s1">&#39;review_overall&#39;</span><span class="p">,</span> <span class="s1">&#39;review_aroma&#39;</span><span class="p">,</span> <span class="s1">&#39;review_appearance&#39;</span><span class="p">,</span> <span class="s1">&#39;review_palate&#39;</span><span class="p">,</span> <span class="s1">&#39;review_taste&#39;</span><span class="p">]]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df3</span><span class="o">.</span><span class="n">corr</span><span class="p">())</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;A3:  The top 2 features that correlate strongly with &quot;review_overall&quot; are &quot;review_taste&quot;=0.79 and &quot;review_palate&quot;=0.70.&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>                   review_overall  review_aroma  review_appearance  \
+review_overall           1.000000      0.612797           0.498480   
+review_aroma             0.612797      1.000000           0.559084   
+review_appearance        0.498480      0.559084           1.000000   
+review_palate            0.699026      0.614922           0.564558   
+review_taste             0.787177      0.714774           0.544570   
+
+                   review_palate  review_taste  
+review_overall          0.699026      0.787177  
+review_aroma            0.614922      0.714774  
+review_appearance       0.564558      0.544570  
+review_palate           1.000000      0.732198  
+review_taste            0.732198      1.000000  
+A3:  The top 2 features that correlate strongly with &#34;review_overall&#34; are &#34;review_taste&#34;=0.79 and &#34;review_palate&#34;=0.70.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Q4.--I-typically-enjoy-a-beer-due-to-its-aroma-and-appearance;-which-beer-style-should-I-try?">Q4.  I typically enjoy a beer due to its aroma and appearance; which beer style should I try?<a class="anchor-link" href="#Q4.--I-typically-enjoy-a-beer-due-to-its-aroma-and-appearance;-which-beer-style-should-I-try?">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Determine mean review_aroma and review_appearance for each beer_style, then retrieve beer_style with maximum value</span>
+
+<span class="n">df_style1</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;beer_style&#39;</span><span class="p">])[[</span><span class="s1">&#39;review_aroma&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">df_style2</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;beer_style&#39;</span><span class="p">])[[</span><span class="s1">&#39;review_appearance&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+
+<span class="n">df_style1</span><span class="o">.</span><span class="n">reindex</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;review_aroma&#39;</span><span class="p">])</span>
+<span class="n">df_style1</span> <span class="o">=</span> <span class="n">df_style1</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;review_aroma&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+
+<span class="n">df_style2</span><span class="o">.</span><span class="n">reindex</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;review_appearance&#39;</span><span class="p">])</span>
+<span class="n">df_style2</span> <span class="o">=</span> <span class="n">df_style2</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;review_appearance&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+
+<span class="c1">#print(df_style1.head())</span>
+<span class="c1">#print(df_style2.head())</span>
+
+<span class="n">df4</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">df_style1</span><span class="p">,</span> <span class="n">df_style2</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;beer_style&#39;</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;inner&#39;</span><span class="p">)</span>
+
+<span class="n">df4</span><span class="p">[</span><span class="s1">&#39;aroma_app_score&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df4</span><span class="p">[</span><span class="s1">&#39;review_aroma&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="n">df4</span><span class="p">[</span><span class="s1">&#39;review_appearance&#39;</span><span class="p">]</span>
+<span class="n">df4</span> <span class="o">=</span> <span class="n">df4</span><span class="o">.</span><span class="n">sort_values</span><span class="p">([</span><span class="s1">&#39;aroma_app_score&#39;</span><span class="p">],</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;A4: The best beer style to try for maximum aroma and appearance is: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">df4</span><span class="o">.</span><span class="n">beer_style</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>A4: The best beer style to try for maximum aroma and appearance is: American Double / Imperial Stout
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+ 
+
+
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = '//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: 'center'," +
+        "    displayIndent: '0em'," +
+        "    showMathMenu: true," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['$','$'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        " linebreaks: { automatic: true, width: '95% container' }, " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'black ! important'} }" +
+        "    } " +
+        "}); ";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+                </article>
+            </aside><!-- /#featured -->
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>blogroll</h2>
+                        <ul>
+                            <li><a href="http://getpelican.com/">Pelican</a></li>
+                            <li><a href="http://python.org/">Python.org</a></li>
+                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                            <li><a href="#">You can modify those links in your config file</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+                            <li><a href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
+
+                            <li><a href="#">You can add links in your config file</a></li>
+                            <li><a href="#">Another social link</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>
